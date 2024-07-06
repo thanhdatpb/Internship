@@ -14,9 +14,10 @@ namespace Internship.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.ToListAsync());
+            return View(_context.users.ToList());
         }
 
-        // Create, Edit, Details, Delete actions can be added here.
+        // Create, Edit, Details, Delete 
+
     }
 }
