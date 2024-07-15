@@ -13,7 +13,7 @@ var configuration = builder.Configuration;
 
 // Add services to the container.
 builder.Services.AddDbContext<InternshipDbContext>(options =>
-    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("InternshipDbContext")));
 
 builder.Services.AddControllersWithViews();
 
