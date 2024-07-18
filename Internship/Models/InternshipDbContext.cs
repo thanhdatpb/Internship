@@ -17,46 +17,5 @@ namespace Internship.Models
         public DbSet<report> Reports { get; set; }
         public DbSet<feedback> Feedback { get; set; }
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<users>();
-            modelBuilder.Entity<Intern>();
-            modelBuilder.Entity<programs>();
-            modelBuilder.Entity<mentor>();
-            modelBuilder.Entity<Intern_Programs>();
-            modelBuilder.Entity<report>();
-            modelBuilder.Entity<feedback>();
-
-            modelBuilder.Entity<Intern>()
-                .HasOne(i => i.users)
-                .WithMany()
-                .HasForeignKey(i => i.UserId);
-
-            modelBuilder.Entity<Intern_Programs>()
-                .HasOne(ip => ip.Intern)
-                .WithMany()
-                .HasForeignKey(ip => ip.InternId);
-
-            modelBuilder.Entity<Intern_Programs>()
-                .HasOne(ip => ip.programs)
-                .WithMany()
-                .HasForeignKey(ip => ip.ProgramId);
-
-            modelBuilder.Entity<Intern_Programs>()
-                .HasOne(ip => ip.mentor)
-                .WithMany()
-                .HasForeignKey(ip => ip.MentorId);
-
-            modelBuilder.Entity<report>()
-                .HasOne(r => r.Intern_Programs)
-                .WithMany()
-                .HasForeignKey(r => r.InternProgramId);
-
-            modelBuilder.Entity<feedback>()
-                .HasOne(f => f.report)
-                .WithMany()
-                .HasForeignKey(f => f.ReportId);
-        }
-   */
     }
 }
